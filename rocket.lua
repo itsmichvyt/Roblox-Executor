@@ -1,4 +1,4 @@
-local v0 = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))();
+local v0 = loadstring(game:HttpGet("https://raw.githubusercontent.com/itsmichvyt/Roblox_Scripts/refs/heads/main/functions.lua"))();
 local v1 = game:GetService("Debris");
 local v2 = game.Players.LocalPlayer;
 local v3 = v2:GetMouse();
