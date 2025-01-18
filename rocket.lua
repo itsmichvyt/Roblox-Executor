@@ -94,7 +94,12 @@ v4.Activated:Connect(function()
 		v40.ExplosionType = Enum.ExplosionType.NoCraters;
 		v40.Position = v39;
 		v40.Parent = workspace;
-		local v47 = workspace:GetPartBoundsInBox(v38, Vector3.new(2 + 8, 17 - 7, 10 + 0));
+		local v47 = workspace:GetPartBoundsInBox(v38, Vector3.new(15, 15, 15));
+                wait(0.1)
+		local cbb = workspace:GetPartBoundsInBox(v38, Vector3.new(15, 15, 15));
+                wait(0.1)
+		local caa = workspace:GetPartBoundsInBox(v38, Vector3.new(15, 15, 15));
+                wait(0.1)
 		local v48 = {};
 		for v50, v51 in ipairs(v47) do
 			local v52 = 791 - (368 + 423);
