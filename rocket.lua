@@ -15,8 +15,8 @@ do
 	v16.MeshId = "rbxassetid://2251534";
 	v16.Scale = Vector3.new(1253.35 - (976 + 277), 0.35, 1138.25 - (116 + 1022));
 	local v19 = Instance.new("Fire", v7);
-	v19.Heat = 962 - (892 + 65);
-	v19.Size = 4 - 2;
+    fire.Heat = 15
+    fire.Size = 12
 	local v22 = Instance.new("BodyForce", v7);
 	v22.Force = Vector3.new(0 - 0, v7:GetMass() * workspace.Gravity, 0 - 0);
 end
@@ -95,11 +95,6 @@ v4.Activated:Connect(function()
 		v40.Position = v39;
 		v40.Parent = workspace;
 		local v47 = workspace:GetPartBoundsInBox(v38, Vector3.new(15, 15, 15));
-                wait(0.1)
-		local cbb = workspace:GetPartBoundsInBox(v38, Vector3.new(15, 15, 15));
-                wait(0.1)
-		local caa = workspace:GetPartBoundsInBox(v38, Vector3.new(15, 15, 15));
-                wait(0.1)
 		local v48 = {};
 		for v50, v51 in ipairs(v47) do
 			local v52 = 791 - (368 + 423);
