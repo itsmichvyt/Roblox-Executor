@@ -20,8 +20,8 @@ local Rocket = Instance.new("Part") do
     mesh.Scale = Vector3.new(0.35, 0.35, 0.25)
     
     local fire = Instance.new("Fire", Rocket)
-    fire.Heat = 5
-    fire.Size = 2
+    fire.Heat = 15
+    fire.Size = 12
     
     local bodyForce = Instance.new("BodyForce", Rocket)
     bodyForce.Force = Vector3.new(0, Rocket:GetMass() * workspace.Gravity, 0)
@@ -108,31 +108,6 @@ rocketLauncher.Activated:Connect(function()
         end
     end)
 end)
-
-local function check(room)
-    local Assets = room:WaitForChild("Assets",2)
-    
-    if Assets then
-        for _,obj in ipairs(Assets:GetChildren()) do
-            if string.match(obj.Name,"Painting") or string.match(obj.Name,"painting") then
-                for _,instance in ipairs(obj:GetDescendants()) do
-                    if instance:IsA("BasePart") or instance:IsA("Part") or instance:IsA("MeshPart") then
-                        instance.CanTouch = true
-                    end
-                end
-            end
-        end
-    end
-end
-
-local addconnect
-addconnect = workspace.CurrentRooms.ChildAdded:Connect(function(room)
-    check(room)
-end)
-
-for i,v in pairs(workspace.CurrentRooms:GetChildren()) do
-    check(v)
-end
 
 task.spawn(function()
     repeat task.wait() until rocketLauncher == nil or not (rocketLauncher:IsDescendantOf(player.Character) or rocketLauncher:IsDescendantOf(player.Backpack))
